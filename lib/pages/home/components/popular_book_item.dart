@@ -1,5 +1,6 @@
 import 'package:bookstore_dicoding/pages/home/components/tag_card.dart';
 import 'package:bookstore_dicoding/repositories/book_data.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class PopularBookItem extends StatelessWidget {
@@ -22,9 +23,7 @@ class PopularBookItem extends StatelessWidget {
               width: 103,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
-                child: Image.network(
-                  data.photo,
-                ),
+                child: CachedNetworkImage(imageUrl: data.photo),
               ),
             ),
             const SizedBox(

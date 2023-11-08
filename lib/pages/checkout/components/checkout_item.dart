@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutItem extends StatelessWidget {
@@ -26,8 +27,8 @@ class CheckoutItem extends StatelessWidget {
           width: 80,
           height: 125,
           child: ClipRRect(
-            child: Image.network(
-              photo,
+            child: CachedNetworkImage(
+              imageUrl: photo,
               fit: BoxFit.cover,
             ),
           ),

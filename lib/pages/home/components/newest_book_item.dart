@@ -1,4 +1,5 @@
 import 'package:bookstore_dicoding/repositories/book_data.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class NewestBookItem extends StatelessWidget {
@@ -25,10 +26,7 @@ class NewestBookItem extends StatelessWidget {
                 width: double.infinity,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
-                  child: Image.network(
-                    data.photo,
-                    fit: BoxFit.fitHeight,
-                  ),
+                  child: CachedNetworkImage(imageUrl: data.photo),
                 ),
               ),
             ),

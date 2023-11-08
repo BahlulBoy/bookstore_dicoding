@@ -1,4 +1,5 @@
 import 'package:bookstore_dicoding/pages/detail_book/components/detail_tag.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import '../../../repositories/book_data.dart';
@@ -76,7 +77,8 @@ class _DetailBookViewState extends State<DetailBookView> {
                               height: 190,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
-                                child: Image.network(widget.data.photo),
+                                child: CachedNetworkImage(
+                                    imageUrl: widget.data.photo),
                               ),
                             ),
                             const SizedBox(
