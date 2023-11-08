@@ -424,6 +424,7 @@ class BookPurchased {
     required this.page,
     required this.category,
     required this.total,
+    required this.totalPrice,
   });
 
   final String photo;
@@ -435,7 +436,8 @@ class BookPurchased {
   final int yearRelease;
   final int page;
   final Category category;
-  final int total;
+  int total;
+  int totalPrice;
 }
 
 enum Category {

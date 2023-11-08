@@ -1,5 +1,4 @@
-import 'package:bookstore_dicoding/pages/home/view/home_view.dart';
-// import 'package:bookstore_dicoding/pages/sign_in/view/sign_in_view.dart';
+import 'package:bookstore_dicoding/pages/sign_in/view/sign_in_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,12 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'BookStore Dicoding',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3C87CC)),
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      debugShowCheckedModeBanner: false,
+      home: const SignInView(),
     );
   }
 }
